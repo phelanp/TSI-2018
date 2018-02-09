@@ -270,7 +270,7 @@ U 1 1 58D4724A
 P 5050 900
 F 0 "+5DC/DC1" H 5050 1170 50  0000 C CNN
 F 1 "+5DC/DC" H 5050 1100 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 5250 900 50  0001 C CNN
+F 2 "custom_footprints:trim_pot" H 5250 900 50  0001 C CNN
 F 3 "" H 5250 900 50  0000 C CNN
 	1    5050 900 
 	1    0    0    -1  

@@ -839,7 +839,7 @@ U 1 1 58C2F5EA
 P 9500 2400
 F 0 "+5HV1" H 9500 2670 50  0000 C CNN
 F 1 "+5HV" H 9500 2600 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 9700 2400 50  0001 C CNN
+F 2 "custom_footprints:TSSOP-16-1EP_4.4x5mm_Pitch0.65mm" H 9700 2400 50  0001 C CNN
 F 3 "" H 9700 2400 50  0000 C CNN
 	1    9500 2400
 	0    1    1    0   
