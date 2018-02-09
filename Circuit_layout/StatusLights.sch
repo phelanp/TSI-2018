@@ -515,8 +515,6 @@ F 3 "" H 1600 5200 50  0000 C CNN
 	1    1600 5200
 	1    0    0    -1  
 $EndComp
-Text Notes 850  6650 0    60   ~ 0
-Will turn on around 27V\n\n250V rated cap.
 Wire Wire Line
 	1600 5200 1600 5500
 Connection ~ 1600 5300
@@ -829,4 +827,6 @@ Wire Wire Line
 Wire Wire Line
 	2400 5750 2600 5750
 Connection ~ 2100 5500
+Text Notes 850  6650 0    60   ~ 0
+Will turn on around 27V\n\n250V rated cap.
 $EndSCHEMATC
