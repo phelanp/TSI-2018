@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -79,7 +78,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -182,7 +180,7 @@ I/O_Ground
 Text Label 1300 800  0    60   ~ 0
 I/O_Ground
 $Comp
-L MCP6001 U21
+L MCP6001-RESCUE-Circuit_layout U21
 U 1 1 58B7DBA9
 P 7950 2700
 F 0 "U21" H 8000 2900 50  0000 C CNN
@@ -244,7 +242,7 @@ L R R58
 U 1 1 58BC1941
 P 3700 2600
 F 0 "R58" V 3780 2600 50  0000 C CNN
-F 1 "24.9k" V 3700 2600 50  0000 C CNN
+F 1 "15k" V 3700 2600 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 3630 2600 50  0001 C CNN
 F 3 "" H 3700 2600 50  0000 C CNN
 F 4 "P24.9KCCT-ND" V 3700 2600 60  0001 C CNN "DigiKey P/N"
@@ -948,6 +946,4 @@ Wire Wire Line
 Wire Wire Line
 	3350 4100 3900 4100
 Connection ~ 3550 4100
-Text Notes 2800 2400 0    39   ~ 0
-Current R58 (24.9k) results in incorrect amplification.\nReplaced w/ 15k
 $EndSCHEMATC

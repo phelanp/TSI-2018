@@ -903,7 +903,7 @@ F 8 "0.10" V 1500 1450 60  0001 C CNN "Cost"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L MMBF170 Q3
+L MMBF170-RESCUE-Circuit_layout Q3
 U 1 1 58D1260E
 P 5100 5350
 F 0 "Q3" H 5300 5425 50  0000 L CNN

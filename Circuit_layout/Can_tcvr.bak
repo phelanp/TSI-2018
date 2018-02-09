@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -97,7 +96,7 @@ Comment3 ""
 Comment4 "DEVELOPMENT ONLY"
 $EndDescr
 $Comp
-L MCP2551-I/SN U10
+L MCP2551-I/SN-RESCUE-Circuit_layout U10
 U 1 1 58A630DD
 P 3800 1500
 F 0 "U10" H 3400 1850 50  0000 L CNN
@@ -210,7 +209,7 @@ CANTX
 Text Label 1700 1200 2    60   ~ 0
 CANRX
 Text Notes 3050 2600 0    60   ~ 0
-NOTE: DO NOT populate R11.\n\nR11 provides the ability to use this board \nas a terminating  CAN node in development only.
+NOTE: DO NOT populate R44.\n\nR44 provides the ability to use this board \nas a terminating CAN node in development only.
 $Comp
 L C C18
 U 1 1 58B93C80

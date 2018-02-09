@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -79,7 +78,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -98,7 +96,7 @@ Comment3 ""
 Comment4 "DEVELOPMENT ONLY"
 $EndDescr
 $Comp
-L MCP2551-I/SN U10
+L MCP2551-I/SN-RESCUE-Circuit_layout U10
 U 1 1 58A630DD
 P 3800 1500
 F 0 "U10" H 3400 1850 50  0000 L CNN
