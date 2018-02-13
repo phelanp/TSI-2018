@@ -236,9 +236,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 1000 5350 900 
 Wire Wire Line
-	4950 1200 5350 1200
-Wire Wire Line
-	5350 1200 5350 1300
+	4950 1200 5750 1200
 Wire Wire Line
 	1100 700  1250 700 
 Wire Wire Line
@@ -256,12 +254,12 @@ Wire Wire Line
 $Comp
 L GND #PWR056
 U 1 1 58D1E1EA
-P 5350 1300
-F 0 "#PWR056" H 5350 1050 50  0001 C CNN
-F 1 "GND" H 5350 1150 50  0000 C CNN
-F 2 "" H 5350 1300 50  0000 C CNN
-F 3 "" H 5350 1300 50  0000 C CNN
-	1    5350 1300
+P 5750 1300
+F 0 "#PWR056" H 5750 1050 50  0001 C CNN
+F 1 "GND" H 5750 1150 50  0000 C CNN
+F 2 "" H 5750 1300 50  0000 C CNN
+F 3 "" H 5750 1300 50  0000 C CNN
+	1    5750 1300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -308,4 +306,20 @@ Wire Wire Line
 	5650 1000 5650 950 
 Text Notes 3850 1800 0    39   ~ 0
 Consider using dual-output DC/DC.\n(+5V/+10V)
+Wire Wire Line
+	5750 1200 5750 1300
+$Comp
+L TEST_1P DC/DC_GND2
+U 1 1 5A867BAF
+P 5500 1450
+F 0 "DC/DC_GND2" H 5500 1720 50  0000 C CNN
+F 1 "+5DC/DC_GND" H 5500 1650 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 5700 1450 50  0001 C CNN
+F 3 "" H 5700 1450 50  0000 C CNN
+	1    5500 1450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5500 1450 5500 1200
+Connection ~ 5500 1200
 $EndSCHEMATC
