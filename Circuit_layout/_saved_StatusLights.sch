@@ -495,7 +495,7 @@ U 1 1 58C1AF35
 P 1200 5600
 F 0 "C3" H 1225 5700 50  0000 L CNN
 F 1 "10uF" H 1225 5500 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D10.0mm_P5.00mm" H 1238 5450 50  0001 C CNN
+F 2 "Capacitors_SMD:CP_Elec_8x10" H 1238 5450 50  0001 C CNN
 F 3 "" H 1200 5600 50  0000 C CNN
 F 4 "490-3550-1-ND" H 1200 5600 60  0001 C CNN "DigiKey P/N"
 F 5 "http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM55DR72E105KW01L/490-3550-1-ND/789455" H 1200 5600 60  0001 C CNN "URL"

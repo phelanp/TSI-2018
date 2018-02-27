@@ -677,8 +677,6 @@ Text Notes 3650 1300 0    60   ~ 0
 Pull-up resistor
 Text Label 11100 6250 0    60   ~ 0
 BOT_uC
-Text Label 6600 5100 0    60   ~ 0
-BOT_uC
 $Comp
 L SW_PUSH SW1
 U 1 1 58BFE5CC
@@ -1353,8 +1351,6 @@ Wire Wire Line
 	10250 3000 9800 3000
 Text Notes 3800 2950 0    99   ~ 0
 Temp. Sensor
-Wire Wire Line
-	7200 5100 6600 5100
 NoConn ~ 9800 3600
 Wire Wire Line
 	8200 5500 8200 5550
@@ -1492,4 +1488,5 @@ Text Label 9850 2000 0    60   ~ 0
 SPARE_LED_CTRL
 Wire Wire Line
 	9800 2000 9850 2000
+NoConn ~ 7200 5100
 $EndSCHEMATC
