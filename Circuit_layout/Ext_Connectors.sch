@@ -27,14 +27,12 @@ LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
-LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
 LIBS:ir
 LIBS:Lattice
 LIBS:linear
-LIBS:logo
 LIBS:maxim
 LIBS:memory
 LIBS:microchip
@@ -96,13 +94,13 @@ Comment3 ""
 Comment4 "DEVELOPMENT ONLY"
 $EndDescr
 Text Label 5650 2600 2    60   ~ 0
-HVPL_1
+TSAL_1
 Text Label 5650 2700 2    60   ~ 0
-HVPL_1_RTN
+TSAL_1_RTN
 Text Label 5650 2800 2    60   ~ 0
-HVPL_2
+TSAL_2
 Text Label 5650 2900 2    60   ~ 0
-HVPL_2_RTN
+TSAL_2_RTN
 $Comp
 L CONN_01X04 J4
 U 1 1 58A769D6
@@ -269,9 +267,9 @@ IMD_Status
 Text GLabel 5650 5200 2    60   Input ~ 0
 IMD_PWM
 Text GLabel 5650 2600 2    60   Input ~ 0
-HVPL
+TSAL
 Text GLabel 5650 2800 2    60   Input ~ 0
-HVPL
+TSAL
 Text GLabel 3200 2000 3    60   Input ~ 0
 A2_LV
 Text GLabel 3100 2000 3    60   Input ~ 0
@@ -307,7 +305,7 @@ F 3 "" H 1600 850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 5650 4200 2    60   Input ~ 0
-HVPL
+TSAL
 Text GLabel 7500 900  2    60   Input ~ 0
 CANH
 Text GLabel 7500 1000 2    60   Input ~ 0
@@ -410,9 +408,9 @@ F 3 "" H 3700 1900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 5600 4200 2    60   ~ 0
-HVPL_Cock
+TSAL_Cock
 Text Label 5100 4400 0    60   ~ 0
-HVPL_Cock_RTN
+TSAL_Cock_RTN
 $Comp
 L Mounting_hole U14
 U 1 1 58DA09CC
@@ -457,10 +455,6 @@ F 3 "" H 10050 750 60  0000 C CNN
 	1    10050 750 
 	1    0    0    -1  
 $EndComp
-Text Notes 14750 2550 0    39   ~ 0
-PIN6 of P3 is unused. Instead Drive_BTN (PIN8) now goes in to uC,\nwhere an interal pull-up is used. 
-Text Notes 14150 3400 0    39   ~ 0
-Note on P2 and P3:\nBoth of these connectors are ordered in less-than-ideal ways if ribbon cables are used.\nAdditionally, the ribbon cable used is too small of gauge.\nThis DOES NOT mean using screw terminals.\n\nConsider using completely different connectors.\nAlso, the footprints do not accurately portray this plastic layout of the\nconnectors themselves. Remeasure/redraw.
 $Comp
 L Conn_01x12 J1
 U 1 1 5A8BB1EA
@@ -813,7 +807,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 1100 7100 1100
 Wire Wire Line
-	7100 1100 7100 1200
+	7100 1100 7100 1400
 Connection ~ 7100 1200
 Wire Wire Line
 	7500 1900 6900 1900
@@ -883,4 +877,7 @@ SPARE_LED
 Wire Wire Line
 	5100 4300 5650 4300
 NoConn ~ 5100 1200
+Connection ~ 7100 1400
+Text Notes 6250 700  0    60   ~ 0
+24V_RTN jumpered to gnd for 10V converter\nConsider using a different DC/DC converter for isolation
 $EndSCHEMATC

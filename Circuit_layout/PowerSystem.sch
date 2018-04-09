@@ -27,14 +27,12 @@ LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
-LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
 LIBS:ir
 LIBS:Lattice
 LIBS:linear
-LIBS:logo
 LIBS:maxim
 LIBS:memory
 LIBS:microchip
@@ -170,7 +168,7 @@ HV+
 Text Label 1250 900  0    60   ~ 0
 HV-
 Text Label 1250 1100 0    60   ~ 0
-HVPL
+TSAL
 Text Label 1250 1450 0    60   ~ 0
 LV_RTN
 $Comp
@@ -214,7 +212,7 @@ HV+
 Text GLabel 1100 900  0    60   Input ~ 0
 HV-
 Text GLabel 1100 1100 0    60   Input ~ 0
-HVPL
+TSAL
 Text GLabel 1100 1450 0    60   Input ~ 0
 +24V_RTN
 Wire Wire Line

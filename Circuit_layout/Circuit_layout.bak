@@ -27,14 +27,12 @@ LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
-LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
 LIBS:ir
 LIBS:Lattice
 LIBS:linear
-LIBS:logo
 LIBS:maxim
 LIBS:memory
 LIBS:microchip
@@ -394,9 +392,9 @@ Text Label 10450 3300 2    60   ~ 0
 Throttle_SEL
 Text Label 10450 3400 2    60   ~ 0
 Throttle_uC
-Text GLabel 900  5500 0    60   Input ~ 0
-A2_LV
 Text GLabel 900  5300 0    60   Input ~ 0
+A2_LV
+Text GLabel 900  5500 0    60   Input ~ 0
 A1_LV
 Text GLabel 9900 2300 2    60   Input ~ 0
 Drive_BTN
@@ -677,8 +675,6 @@ Text Notes 3650 1300 0    60   ~ 0
 Pull-up resistor
 Text Label 11100 6250 0    60   ~ 0
 BOT_uC
-Text Label 6600 5100 0    60   ~ 0
-BOT_uC
 $Comp
 L SW_PUSH SW1
 U 1 1 58BFE5CC
@@ -933,20 +929,6 @@ F 6 "ERJ-6ENF1002V" V 4550 5400 60  0001 C CNN "Man P/N"
 	0    1    1    0   
 $EndComp
 $Comp
-L R R18
-U 1 1 58D1580D
-P 4800 5650
-F 0 "R18" V 4880 5650 50  0000 C CNN
-F 1 "10k" V 4800 5650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4730 5650 50  0001 C CNN
-F 3 "" H 4800 5650 50  0000 C CNN
-F 4 "P10.0KCCT-ND" V 4800 5650 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 4800 5650 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1002V" V 4800 5650 60  0001 C CNN "Man P/N"
-	1    4800 5650
-	-1   0    0    1   
-$EndComp
-$Comp
 L GND #PWR019
 U 1 1 58D15ED8
 P 5200 5900
@@ -1197,8 +1179,6 @@ Wire Wire Line
 	5200 5050 5300 5050
 Wire Wire Line
 	4700 5400 4900 5400
-Wire Wire Line
-	4800 5500 4800 5400
 Connection ~ 4800 5400
 Wire Wire Line
 	4800 5800 4800 5850
@@ -1353,8 +1333,6 @@ Wire Wire Line
 	10250 3000 9800 3000
 Text Notes 3800 2950 0    99   ~ 0
 Temp. Sensor
-Wire Wire Line
-	7200 5100 6600 5100
 NoConn ~ 9800 3600
 Wire Wire Line
 	8200 5500 8200 5550
@@ -1492,4 +1470,11 @@ Text Label 9850 2000 0    60   ~ 0
 SPARE_LED_CTRL
 Wire Wire Line
 	9800 2000 9850 2000
+NoConn ~ 7200 5100
+Text Notes 600  6000 0    60   ~ 0
+Current version of board\nhas current sensor outputs\nbackwards, this was manually\ncorrected
+Wire Wire Line
+	4800 5500 4800 5400
+Text Notes 4400 5750 0    60   ~ 0
+R18 on current\nboard removed
 $EndSCHEMATC

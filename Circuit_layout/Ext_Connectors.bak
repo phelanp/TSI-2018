@@ -27,14 +27,12 @@ LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
-LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
 LIBS:ir
 LIBS:Lattice
 LIBS:linear
-LIBS:logo
 LIBS:maxim
 LIBS:memory
 LIBS:microchip
@@ -172,8 +170,6 @@ Text GLabel 1900 6150 2    60   Input ~ 0
 +5HV
 Text GLabel 5500 900  2    60   Input ~ 0
 Brake_24
-Text GLabel 5500 1200 2    60   Input ~ 0
-BOT
 Text GLabel 5500 1300 2    60   Input ~ 0
 APPS1_10
 Text GLabel 5500 1800 2    60   Input ~ 0
@@ -459,10 +455,6 @@ F 3 "" H 10050 750 60  0000 C CNN
 	1    10050 750 
 	1    0    0    -1  
 $EndComp
-Text Notes 14750 2550 0    39   ~ 0
-PIN6 of P3 is unused. Instead Drive_BTN (PIN8) now goes in to uC,\nwhere an interal pull-up is used. 
-Text Notes 14150 3400 0    39   ~ 0
-Note on P2 and P3:\nBoth of these connectors are ordered in less-than-ideal ways if ribbon cables are used.\nAdditionally, the ribbon cable used is too small of gauge.\nThis DOES NOT mean using screw terminals.\n\nConsider using completely different connectors.\nAlso, the footprints do not accurately portray this plastic layout of the\nconnectors themselves. Remeasure/redraw.
 $Comp
 L Conn_01x12 J1
 U 1 1 5A8BB1EA
@@ -566,7 +558,7 @@ U 1 1 5A8CEC37
 P 8900 1900
 F 0 "J10" H 8900 2100 50  0000 C CNN
 F 1 "Can_Iso" H 8900 1600 50  0000 C CNN
-F 2 "custom_footprints:IMD_Header" H 8900 1900 50  0001 C CNN
+F 2 "Connectors_Molex:Molex_MiniFit-JR-5556-04A_2x02x4.20mm_Straight" H 8900 1900 50  0001 C CNN
 F 3 "" H 8900 1900 50  0001 C CNN
 	1    8900 1900
 	-1   0    0    -1  
@@ -753,8 +745,6 @@ Wire Wire Line
 Wire Wire Line
 	5100 1100 5500 1100
 Wire Wire Line
-	5500 1200 5100 1200
-Wire Wire Line
 	5100 1300 5500 1300
 Wire Wire Line
 	5500 1400 5100 1400
@@ -817,7 +807,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 1100 7100 1100
 Wire Wire Line
-	7100 1100 7100 1200
+	7100 1100 7100 1400
 Connection ~ 7100 1200
 Wire Wire Line
 	7500 1900 6900 1900
@@ -886,4 +876,8 @@ Text GLabel 5650 4300 2    60   Input ~ 0
 SPARE_LED
 Wire Wire Line
 	5100 4300 5650 4300
+NoConn ~ 5100 1200
+Connection ~ 7100 1400
+Text Notes 6250 700  0    60   ~ 0
+24V_RTN jumpered to gnd for 10V converter\nConsider using a different DC/DC converter for isolation
 $EndSCHEMATC

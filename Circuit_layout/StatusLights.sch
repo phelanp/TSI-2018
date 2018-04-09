@@ -27,14 +27,12 @@ LIBS:elec-unifil
 LIBS:ESD_Protection
 LIBS:ftdi
 LIBS:gennum
-LIBS:graphic
 LIBS:hc11
 LIBS:intel
 LIBS:interface
 LIBS:ir
 LIBS:Lattice
 LIBS:linear
-LIBS:logo
 LIBS:maxim
 LIBS:memory
 LIBS:microchip
@@ -495,7 +493,7 @@ U 1 1 58C1AF35
 P 1200 5600
 F 0 "C3" H 1225 5700 50  0000 L CNN
 F 1 "10uF" H 1225 5500 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D10.0mm_P5.00mm" H 1238 5450 50  0001 C CNN
+F 2 "Capacitors_SMD:CP_Elec_8x10" H 1238 5450 50  0001 C CNN
 F 3 "" H 1200 5600 50  0000 C CNN
 F 4 "490-3550-1-ND" H 1200 5600 60  0001 C CNN "DigiKey P/N"
 F 5 "http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM55DR72E105KW01L/490-3550-1-ND/789455" H 1200 5600 60  0001 C CNN "URL"
@@ -515,9 +513,6 @@ F 3 "" H 1600 5200 50  0000 C CNN
 	1    1600 5200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1600 5200 1600 5500
-Connection ~ 1600 5300
 Connection ~ 1200 5300
 $Comp
 L R R71
@@ -584,9 +579,9 @@ F 8 "0.10" V 9800 2450 60  0001 C CNN "Cost"
 	0    1    1    0   
 $EndComp
 Text GLabel 1250 1600 0    60   Input ~ 0
-HVPL
+TSAL
 Text Label 1400 1600 0    60   ~ 0
-HVPL
+TSAL
 Wire Wire Line
 	1250 1600 1400 1600
 $Comp
@@ -601,8 +596,8 @@ F 3 "" H 4700 6000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 5000 5300 2    60   ~ 0
-HVPL
-Text Notes 5050 5700 0    60   ~ 0
+TSAL
+Text Notes 4800 5150 0    60   ~ 0
 Note: this is going to three LEDs
 Text Notes 2900 5100 0    60   ~ 0
 Outputs +12V
@@ -613,7 +608,7 @@ L TEST_1P HVPL_LV1
 U 1 1 58D48101
 P 4300 5200
 F 0 "HVPL_LV1" H 4300 5470 50  0000 C CNN
-F 1 "HVPL_LV" H 4300 5400 50  0000 C CNN
+F 1 "TSAL_LV" H 4300 5400 50  0000 C CNN
 F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 4500 5200 50  0001 C CNN
 F 3 "" H 4500 5200 50  0000 C CNN
 	1    4300 5200
@@ -631,10 +626,10 @@ F 3 "" H 4500 6000 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4300 6000 4300 5900
+	4300 5750 4300 6000
 Connection ~ 4300 5900
 Wire Wire Line
-	4300 5200 4300 5300
+	4300 5200 4300 5450
 Connection ~ 4300 5300
 $Comp
 L TEST_1P HV_GND1
@@ -658,8 +653,6 @@ F 3 "" H 2300 5200 50  0000 C CNN
 	1    2100 5200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2100 5800 2100 6000
 Connection ~ 2100 5900
 Wire Wire Line
 	2100 5200 2100 5300
@@ -764,7 +757,7 @@ SPARE_LED
 Wire Wire Line
 	1250 1000 1400 1000
 Text Notes 2650 6450 0    99   ~ 0
-HVPL
+TSAL
 NoConn ~ 2600 5450
 $Comp
 L RUW15SL12C U1
@@ -796,37 +789,32 @@ Wire Wire Line
 Wire Wire Line
 	3800 5300 5000 5300
 NoConn ~ 3800 5450
-$Comp
-L R R16
-U 1 1 5A7E9A17
-P 1850 5500
-F 0 "R16" V 1930 5500 50  0000 C CNN
-F 1 "250K" V 1850 5500 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1780 5500 50  0001 C CNN
-F 3 "" H 1850 5500 50  0000 C CNN
-	1    1850 5500
-	0    1    1    0   
-$EndComp
-$Comp
-L R R19
-U 1 1 5A7E9ABB
-P 2100 5650
-F 0 "R19" V 2180 5650 50  0000 C CNN
-F 1 "4.3k" V 2100 5650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2030 5650 50  0001 C CNN
-F 3 "" H 2100 5650 50  0000 C CNN
-	1    2100 5650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1600 5500 1700 5500
-Wire Wire Line
-	2000 5500 2400 5500
-Wire Wire Line
-	2400 5500 2400 5750
-Wire Wire Line
-	2400 5750 2600 5750
-Connection ~ 2100 5500
 Text Notes 850  6650 0    60   ~ 0
-Will turn on around 27V\n\n250V rated cap.
+Will turn on around 16V\n\n250V rated cap.
+Wire Wire Line
+	1600 5200 1600 5300
+Connection ~ 1600 5300
+NoConn ~ 2600 5750
+Wire Wire Line
+	2100 5900 2100 6000
+Text Notes 1500 5650 0    60   ~ 0
+R16 and R19 removed\non current board
+$Comp
+L R R?
+U 1 1 5ACB41D1
+P 4300 5600
+F 0 "R?" V 4380 5600 50  0000 C CNN
+F 1 "200R/2W" V 4300 5600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4230 5600 50  0001 C CNN
+F 3 "" H 4300 5600 50  0000 C CNN
+F 4 "P10.0KCCT-ND" V 4300 5600 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 4300 5600 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1002V" V 4300 5600 60  0001 C CNN "Man P/N"
+	1    4300 5600
+	-1   0    0    1   
+$EndComp
+Text Notes 4400 5800 0    60   ~ 0
+Resistor added for loading DC/DC\nconverter to minimum current (.125A)\nShould be 96R/2W
+Text Notes 3300 6500 0    60   ~ 0
+Pins 6 and 8 are reversed on the footprint\nFootpirnt and layout need to be fixed
 $EndSCHEMATC
